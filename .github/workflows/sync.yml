@@ -1,7 +1,7 @@
 name: Sync LeetCode Submissions
 
 on:
-  workflow_dispatch: 
+  workflow_dispatch:
   schedule:
     - cron: '0 8 * * *'
 
@@ -16,3 +16,4 @@ jobs:
           leetcode-session: ${{ secrets.LEETCODE_SESSION }}
           leetcode-csrf-token: ${{ secrets.LEETCODE_CSRF_TOKEN }}
           destination-folder: 'solutions'
+          sync-past-submissions: true
